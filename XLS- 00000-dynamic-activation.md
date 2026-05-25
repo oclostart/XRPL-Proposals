@@ -29,7 +29,7 @@ The proposed solution introduces a new optional field in every amendment definit
 
 | Field Name    | Constant | Required | Internal Type | Default Value | Description |
 |---------------|----------|----------|---------------|---------------|-------------|
-| activationTag | No       | No       | UINT8         | 4             | A value of 0-4 correlating the number of days required for activaton. |
+| activationTag | No       | No       | UINT8         | 4             | A value of 0-4 correlating the number of days required for activation. |
 
 **Activation Tag Values:**
 
