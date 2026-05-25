@@ -49,11 +49,11 @@ The proposed solution introduces a new optional field in every amendment definit
 | 1     | 24 hours          |
 | 0     | Immediate         |
 
-# Diagram: Amendment Activation Process with activationTag
+## Diagram: Amendment Activation Process with activationTag
                 +-------------------------+
                 | 1. Author submits       |
-                |   Amendment + optional  |
-                |   activationTag         |
+                |    Amendment + optional |
+                |    activationTag        |
                 +-------------------------+
                             |
                             v
@@ -73,31 +73,22 @@ The proposed solution introduces a new optional field in every amendment definit
                             v
                 +-------------------------+
                 | 4. 80% supermajority    |
-                |    reached?             |
+                |    reached              |
                 +-------------------------+
-                   |               |
-                   | Yes           | No
-                   v               |
-         +-------------------+     |
-         | 5. Activation     |<----+
-         |    timer starts   |
-         |    (based on tag) |
-         +-------------------+
-                   |
-                   v
-         +-------------------+
-         | 6. Wait exact     |
-         |    duration of    |
-         |    continuous     |
-         |    80% support    |
-         +-------------------+
-                   |
-                   v
-         +-------------------+
-         | 7. Amendment      |
-         |    activates on   |
-         |    next ledger    |
-         +-------------------+
+                            |
+                            v
+                +-------------------------+
+                | 5. Activation timer     |
+                |    starts               |
+                |    (based on tag)       |
+                +-------------------------+
+                            |
+                            v
+                +-------------------------+
+                | 6. Amendment activates  |
+                |    on next ledger       |
+                +-------------------------+
+
 ## 4. Rationale
 
 Two main factors determining how quickly an amendment goes live include the two-week activation period, after 80% dUNL validator approval, and the current activity level of those validators. In the best-case scenario (80% approval within 24 hours), an amendment would still require 15 days to activate. The current reality is that it takes months.
