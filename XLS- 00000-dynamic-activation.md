@@ -13,23 +13,15 @@
 
 ## 1. Abstract
 
-Currently, how fast an amendment starts the two week activation period is an unknown factor creating security risks when implementatio . To improve reasonable implementation times for critical 
+The XRP Ledger currently requires every amendment that reaches the 80% validator support threshold to observe a fixed 14 day activation period before becoming enabled. Continuing with this fixed period creates significant risk when critical security vulnerabilities or zero day attacks are discovered.
 
-This proposal introduces an optional per-amendment **activationTag** (integer 0–4) embedded directly in the amendment definition. The tag lets the author specify a shorter, risk-appropriate activation window while keeping the process fully transparent and backward compatible.
-
-Once an amendment vote reaches the 80% validator support required to pass the 14 day (2-week) activation period starts counting down
-
-This proposal introduces a per-amendment activation tag (an integer 0–4) that allows the amendment’s author to set a shorter, risk-appropriate 
-activation window. The tag is embedded directly in the amendment definition, making the process transparent.
-
-influence (by voting or not), but there is no built-in, explicit mechanism to shorten the activation safely. This creates unnecessary exposure
-windows for the ledger when speed is critical.
+This proposal introduces an optional per-amendment **activationTag** (integer 0–4) embedded directly in the amendment definition. The tag allows the author to specify a shorter, risk-appropriate activation window while keeping the process fully transparent and backward compatible. This new field helps mitigate the combined delays from bug-fix development, dUNL validator response times, testing, and the mandatory two-week activation period when critical vulnerabilities or attacks are discovered.
 
 ## 2. Motivation
 
-The XRP Ledger community has become accustomed to the standard two-week activation period required for amendments to become active after reaching the 80% dUNL validator support threshold. This creates significant risk when critical vulnerabilities or zero-day attacks are discovered because there are no mitigation options.
+The XRPL currently has no built in mechanism to shorten the activation window for amendments in emergency situations. To maintain ledger uptime, security, and integrity, a more flexible approach is needed to address time sensitive issues.
 
-The XRPL currently has no built-in mechanism to shorten the activation window for amendments in emergency situations. To maintain ledger uptime, security, and integrity, a more flexible approach is needed to address time sensitive issues.
+Recently, dUNL response times have drastically improved thanks to the XRPL Foundation. While this allows amendments to be implemented faster, the fixed 14 day activation period still creates an unacceptable delay when dealing with critical vulnerabilities or zero-day attacks. Even with these ongoing improvements, the current system is not sufficient for urgent situations.
 
 ## 3. Specification
 
@@ -49,19 +41,36 @@ The proposed solution introduces a new optional field in every amendment definit
 | 1     | 24 hours          |
 | 0     | Immediate         |
 
+Ammenment Author Recommendations
 
-a tag other than 4 should only be used when there's a concern for the ledgers security, stability, and integrity. 
-4 - Every ammendment defaults to the current ledger state with a 14 day activation period. If the ammendment is not addressing the network's
-Recommended Use Case:Standard features, improvements, edge-case fixes
-3. Moderate bugs (not critical, but worth faster rollout)
+4 - Every ammendment should receive this value unless it is addressing security, stability, or integrity concerns. Uses cases include standard features, improvements, and edge-case fixes.
 
-2.Critical bugs with known impact
+3 -  Used to address moderate bugs not considered critical, but a worth faster rollout. B
 
-1. Serious security issues
+2 - Critical vulnerability was found with an impact to bring down the network. Difficulty to find is easy to moderate.
 
-0 Zero-day vulnerabilities
-Ammendment Author can counter a slow vote by incorporating a  
+1 - Critical vulnerability was found, but not active, with an impact to bring down the network. VUlnurability difficulty to find is easy. 
 
+0 - Rare used for zero-day attacks affecting ledger stability, security and integrity.
+-----
+The proposed solution introduces a new optional field in every amendment definition. If the `activationTag` field is omitted, the amendment defaults to value **4**.
+
+| Field Name    | Constant | Required | Internal Type | Default Value | Description |
+|---------------|----------|----------|---------------|---------------|-------------|
+| activationTag | No       | No       | UINT8         | 4             | An integer value (0–4) indicating the minimum continuous supermajority (80%) support period required before the amendment activates. |
+
+**Activation Tag Values:**
+
+| Value | Duration          | Recommended Use Case |
+|-------|-------------------|----------------------|
+| 4     | 14 days (default) | Standard features, improvements, and edge-case fixes. Every amendment should use this value unless it addresses security, stability, or integrity concerns. |
+| 3     | 10 days           | Moderate bugs that are not critical but would benefit from a faster rollout. |
+| 2     | 3 days            | Critical vulnerabilities with network-wide impact that are moderately easy to discover and exploit. |
+| 1     | 24 hours          | Critical vulnerabilities with network-wide impact that have not yet been actively exploited and are relatively easy to discover. |
+| 0     | Immediate         | Rare cases involving active zero-day attacks that threaten ledger stability, security, and integrity. |
+
+**Amendment Author Guidance**  
+Authors should choose the lowest `activationTag` value that is appropriate for the urgency and risk of the change. Using a lower tag signals to the network that faster activation is justified.
 
 ## Diagram: Amendment Activation Process with activationTag
                 +-------------------------+
@@ -141,6 +150,8 @@ TBA.
 
 ## 8. Security Considerations
 
+Besides offseting bug fix development times, dUNL Validator delays, testing time, and the two week activation period this proposal helps remove the vulnerability of announcing an update due to a vulnerability that was found. 
+
 If a zero-day attack is occurring on the XRP Ledger that affects wallet funds or network integrity, the protocol currently has no built-in mechanism to respond quickly. The same is true for a critical vulnerability that could heavily impact network performance and security.
 
 Downgrading to a previous version is not always a viable solution, as it may not fully resolve the vulnerability or stop an active attack. Fixes themselves also take time to develop and test. This tag counters both dUNL validator inactivity and long fix development times.
@@ -151,8 +162,8 @@ All activation behavior remains fully enforced on-ledger through the normal amen
 
 The `activationTag` is embedded directly in the amendment definition and is visible in the ledger and rippled source code before any vote begins, giving the entire network full transparency. No new attack surface is introduced — the mechanism simply provides a safer, faster, and more controlled way to respond to genuine zero-day vulnerabilities and critical bugs that already threaten ledger integrity today.
 
-# Appendix _(Optional)_
+# Appendix
 
-## Appendix A: FAQ _(Optional)_
+## Appendix A: FAQ
 
 ### A.1: [Question]
