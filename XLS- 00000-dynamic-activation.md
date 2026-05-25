@@ -1,6 +1,6 @@
 <pre>
   xls: [XLS number]
-  title: [The title is a few words, not a complete sentence]
+  title: [Ttsstence]
   description: [Description is one full (short) sentence]
   implementation: [optional - link to rippled PR for Amendment/System XLSes]
   author: [a comma separated list of the author(s) with email addresses]
