@@ -128,7 +128,7 @@ TBA.
 
 ## 8. Security Considerations
 
-- Besides offseting bug fix development times, dUNL Validator delays, testing time, and the two week activation period this proposal helps remove the vulnerability of announcing an update due to a vulnerability that was found. 
+- Besides offsetting bug fix development times, dUNL Validator delays, testing time, and the two week activation period this proposal helps remove the vulnerability of announcing an update due to a vulnerability that was found. 
 
 - If a zero-day attack is occurring on the XRP Ledger that affects wallet funds or network integrity, the protocol currently has no built in mechanism to respond quickly. The same is true for a critical vulnerability that could heavily impact network performance and security.
 
