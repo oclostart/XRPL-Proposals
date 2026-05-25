@@ -1,7 +1,7 @@
 <pre>
 xls: 0000
 title: Dynamic Activation
-description: Per amendment configurable activation windows (0–14 days) to enable faster response to critical vulnerabilities and zero-day attacks while keeping the standard process for normal changes
+description: Per amendment configurable activation windows (0–14 days) to enable faster response to critical vulnerabilities and zero day attacks while keeping the standard process for normal changes
 author: Ivan Cinseros
 category: Amendment
 status: Idea
