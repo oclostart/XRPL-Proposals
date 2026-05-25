@@ -45,7 +45,8 @@ The proposed solution introduces a new optional field in every amendment definit
 
 Authors should choose the lowest `activationTag` value that is appropriate for the urgency and risk of the change. Using a lower tag signals to the network that faster activation is justified.
 
-These recommended values provide a well balanced approach, giving node operators sufficient time to upgrade while also providing options to address urgent incidents in a reasonable timeframe.
+These recommended values provide a well balanced approach, giving other node operators sufficient time to upgrade while also providing options to address urgent incidents in a reasonable timeframe. This prevents uneccesary amendment blocks and improves ledger security.
+
 
 ## Diagram: Amendment Activation Process with activationTag
                 +-------------------------+
