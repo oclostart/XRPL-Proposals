@@ -41,7 +41,8 @@ The proposed solution introduces a new optional field in every amendment definit
 | 1     | 24 hours          | Critical vulnerabilities with network wide impact that have not yet been actively exploited and are relatively easy to discover and exploit. |
 | 0     | Immediate         | Rare cases involving active zero-day attacks that threaten ledger stability, security, and integrity. |
 
-**Amendment Author Guidance**  
+**Amendment Author Guidance** 
+
 Authors should choose the lowest `activationTag` value that is appropriate for the urgency and risk of the change. Using a lower tag signals to the network that faster activation is justified.
 
 These recommended values provide a well balanced approach, giving node operators sufficient time to upgrade while also providing options to address urgent incidents in a reasonable timeframe.
