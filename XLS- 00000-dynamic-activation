@@ -1,9 +1,13 @@
-XLS-XXXX: Dynamic Amendment Activation Periods
-==============================================
-Status: Requirements In Progress
-Category: Amendment
-Created: May 25, 2026
-Author: Ivan Cisneros
+discussion: Amendment Proposal: Dynamic Activation
+
+title: XLS-00XX Dynamic Activation
+category: Amendment
+status: Proposal
+author: Ivan Cisneros
+created: 2026-05-25
+updated: 2026-05-25
+description:
+
 
 The XRP Ledger currently requires any amendment that reaches 80% validator support to wait a fixed 14 day (2-week) activation period 
 before becoming enabled. This delay provides time for node operators to upgrade but creates significant risk when critical security
