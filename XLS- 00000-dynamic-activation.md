@@ -1,5 +1,4 @@
 <pre>
----
 xls: 0000
 title: Dynamic Activation
 description: Per amendment configurable activation windows (0–14 days) to enable faster response to critical vulnerabilities and zero-day attacks while keeping the standard process for normal changes
@@ -8,7 +7,6 @@ category: Amendment
 status: Idea
 created: 2026-05-25
 updated: 2026-05-25
----
 </pre>
 
 # Amendment Idea: XLS-0000 Dynamic Activation
