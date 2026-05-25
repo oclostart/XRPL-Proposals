@@ -128,20 +128,23 @@ TBA.
 
 ## 8. Security Considerations
 
-Besides offseting bug fix development times, dUNL Validator delays, testing time, and the two week activation period this proposal helps remove the vulnerability of announcing an update due to a vulnerability that was found. 
+- Besides offseting bug fix development times, dUNL Validator delays, testing time, and the two week activation period this proposal helps remove the vulnerability of announcing an update due to a vulnerability that was found. 
 
-If a zero-day attack is occurring on the XRP Ledger that affects wallet funds or network integrity, the protocol currently has no built-in mechanism to respond quickly. The same is true for a critical vulnerability that could heavily impact network performance and security.
+- If a zero-day attack is occurring on the XRP Ledger that affects wallet funds or network integrity, the protocol currently has no built in mechanism to respond quickly. The same is true for a critical vulnerability that could heavily impact network performance and security.
 
-Downgrading to a previous version is not always a viable solution, as it may not fully resolve the vulnerability or stop an active attack. Fixes themselves also take time to develop and test. This tag counters both dUNL validator inactivity and long fix development times.
+- Downgrading to a previous version is not always a viable solution, as it may not fully resolve the vulnerability or stop an active attack. 
 
-This proposal addresses these risks by introducing the optional `activationTag`. Since the tag is entirely optional and defaults to the existing 14-day period, it cannot accidentally shorten activation windows on any amendment unless the author explicitly chooses a faster value.
+- This proposal addresses these risks by introducing the optional `activationTag`. Since the tag is **entirely optional** and defaults to the existing 14-day period, it cannot accidentally shorten activation windows on any amendment unless the author explicitly chooses a faster value.
 
-All activation behavior remains fully enforced on-ledger through the normal amendment voting process (80% supermajority required). Validators and node operators retain complete control, they can refuse to vote for any amendment that uses an aggressive tag, or they can upgrade and vote quickly when an emergency tag is justified.
+- All activation behavior remains fully enforced on ledger through the normal amendment voting process. Validators and node operators retain complete control, they can refuse to vote for any amendment that uses an aggressive tag, or they can upgrade and vote quickly when an emergency tag is justified.
 
-The `activationTag` is embedded directly in the amendment definition and is visible in the ledger and rippled source code before any vote begins, giving the entire network full transparency. No new attack surface is introduced — the mechanism simply provides a safer, faster, and more controlled way to respond to genuine zero-day vulnerabilities and critical bugs that already threaten ledger integrity today.
+- The `activationTag` is embedded directly in the amendment definition and is visible in the ledger and rippled source code **before any vote begins**, giving the entire network full transparency. This mechanism simply provides a safer, faster, and more controlled way to respond to genuine zero day vulnerabilities and critical bugs.
 
 # Appendix
-
 ## Appendix A: FAQ
 
+TBA
+
 ### A.1: [Question]
+
+TBA
