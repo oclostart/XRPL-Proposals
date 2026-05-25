@@ -15,7 +15,7 @@
 
 The XRP Ledger currently requires every amendment that reaches the 80% validator support threshold to observe a fixed 14 day activation period before becoming enabled. Continuing with this fixed period creates significant risk when critical security vulnerabilities or zero day attacks are discovered.
 
-This proposal introduces an optional per-amendment **activationTag** (integer 0–4) embedded directly in the amendment definition. The tag allows the author to specify a shorter, risk-appropriate activation window while keeping the process fully transparent and backward compatible. This new field helps mitigate the combined delays from bug-fix development, dUNL validator response times, testing, and the mandatory two-week activation period when critical vulnerabilities or attacks are discovered.
+This proposal introduces an optional per amendment **activationTag** (integer 0–4) embedded directly in the amendment definition. The tag allows the author to specify a shorter, risk-appropriate activation window while keeping the process fully transparent and backward compatible. This new field helps mitigate the combined delays from bug-fix development, dUNL validator response times, testing, and the mandatory two-week activation period when critical vulnerabilities or attacks are discovered.
 
 ## 2. Motivation
 
