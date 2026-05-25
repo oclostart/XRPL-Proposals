@@ -96,7 +96,7 @@ A mechanism should exist allowing amendments to activate as soon as they reach t
 
 ## 5. Backwards Compatibility
 
-By making `activationTag` an optional field that defaults to the current 14-day activation period (value 4), this proposal maintains full backward compatibility. Existing and future amendments are completely unaffected, and the current standards of the XRP Ledger remain unchanged.
+By making `activationTag` an optional field that defaults to the current 14 day activation period (value 4), this proposal maintains full backward compatibility. Existing and future amendments are completely unaffected, and the current standards of the XRP Ledger remain unchanged.
 
 ## 6. Test Plan
 
