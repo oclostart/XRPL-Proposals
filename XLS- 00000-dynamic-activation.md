@@ -1,5 +1,5 @@
 <pre>
-  xls: [XLS number]
+  xls: XXXX
   title: Dynamic Activation
   description: Per ammendment configurable activation period of 14 days, 10 days, 3 days, 1 day, and now to address ledger vulnerabilities.
   author: Ivan Cinseros
