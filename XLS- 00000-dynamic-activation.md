@@ -25,7 +25,7 @@ Recently, dUNL response times have drastically improved thanks to the XRPL Found
 
 ## 3. Specification
 
-The proposed solution introduces a new optional field in every amendment definition. If the `activationTag` field is omitted, the amendment defaults the activationTag to a value, 4.
+The proposed solution introduces a new optional field in every amendment definition. If the `activationTag` field is omitted, the amendment defaults to value **4**.
 
 | Field Name    | Constant | Required | Internal Type | Default Value | Description |
 |---------------|----------|----------|---------------|---------------|-------------|
@@ -33,44 +33,18 @@ The proposed solution introduces a new optional field in every amendment definit
 
 **Activation Tag Values:**
 
-| Activation Tag | Duration          |
-|-------|-------------------|
-| 4     | 14 days (default) |
-| 3     | 10 days           |
-| 2     | 3 days            |
-| 1     | 24 hours          |
-| 0     | Immediate         |
-
-Ammenment Author Recommendations
-
-4 - Every ammendment should receive this value unless it is addressing security, stability, or integrity concerns. Uses cases include standard features, improvements, and edge-case fixes.
-
-3 -  Used to address moderate bugs not considered critical, but a worth faster rollout. B
-
-2 - Critical vulnerability was found with an impact to bring down the network. Difficulty to find is easy to moderate.
-
-1 - Critical vulnerability was found, but not active, with an impact to bring down the network. VUlnurability difficulty to find is easy. 
-
-0 - Rare used for zero-day attacks affecting ledger stability, security and integrity.
------
-The proposed solution introduces a new optional field in every amendment definition. If the `activationTag` field is omitted, the amendment defaults to value **4**.
-
-| Field Name    | Constant | Required | Internal Type | Default Value | Description |
-|---------------|----------|----------|---------------|---------------|-------------|
-| activationTag | No       | No       | UINT8         | 4             | An integer value (0–4) indicating the minimum continuous supermajority (80%) support period required before the amendment activates. |
-
-**Activation Tag Values:**
-
 | Value | Duration          | Recommended Use Case |
 |-------|-------------------|----------------------|
 | 4     | 14 days (default) | Standard features, improvements, and edge-case fixes. Every amendment should use this value unless it addresses security, stability, or integrity concerns. |
 | 3     | 10 days           | Moderate bugs that are not critical but would benefit from a faster rollout. |
-| 2     | 3 days            | Critical vulnerabilities with network-wide impact that are moderately easy to discover and exploit. |
-| 1     | 24 hours          | Critical vulnerabilities with network-wide impact that have not yet been actively exploited and are relatively easy to discover. |
+| 2     | 3 days            | Critical vulnerabilities with network wide impact that are moderately easy to discover and exploit. |
+| 1     | 24 hours          | Critical vulnerabilities with network wide impact that have not yet been actively exploited and are relatively easy to discover and exploit. |
 | 0     | Immediate         | Rare cases involving active zero-day attacks that threaten ledger stability, security, and integrity. |
 
 **Amendment Author Guidance**  
 Authors should choose the lowest `activationTag` value that is appropriate for the urgency and risk of the change. Using a lower tag signals to the network that faster activation is justified.
+
+These recommended values provide a well balanced approach, giving node operators sufficient time to upgrade while also providing options to address urgent incidents in a reasonable timeframe.
 
 ## Diagram: Amendment Activation Process with activationTag
                 +-------------------------+
