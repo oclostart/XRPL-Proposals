@@ -90,11 +90,9 @@ These recommended values provide a well balanced approach, giving other node ope
 
 ## 4. Rationale
 
-Two main factors determining how quickly an amendment goes live include the two-week activation period, after 80% dUNL validator approval, and the current activity level of those validators. In the best-case scenario (80% approval within 24 hours), an amendment would still require 15 days to activate. The current reality is that it takes months.
+Two main factors determine how quickly an amendment goes live, the mandatory two-week activation period after 80% dUNL validator approval, and the current activity level of those validators. Even in the best-case scenario (80% approval within 24 hours), an amendment still requires a full 15 days to activate. In practice, it can often take months for sufficient validators to vote.
 
-Creating a method to address critical vulnerabilities when they are found or actively being used needs to be created. The XRPL Foundation has helped improve dUNL response time drastically in the last year but it is still a work in progress. To mitigate these wait concerns that dUNL Validators can cause by not voting
-
-Even in the best case scenerio, waiting 15 days to address a known critical vulnerability or worse, a zero-day attack is not acceptable. With the right checks and balances, a mechanism should exist to allow an amendment to activate as soon as it reaches the 80% threshold when urgent events are affecting ledger performance, security, or integrity. Adding a simple `activationTag` makes the XRP Ledger far more resilient, helping maintain its uptime and reputation.
+a mechanism should exist to allow an amendment to activate as soon as it reaches the 80% threshold when urgent events or active exploits are affecting ledger performance, security, or integrity. Adding a simple `activationTag` makes the XRP Ledger far more resilient, helping maintain its uptime and reputation.
 
 ## 5. Backwards Compatibility
 
