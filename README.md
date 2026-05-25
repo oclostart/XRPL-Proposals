@@ -1,3 +1,3 @@
 # XRPL-Proposals
 
-1. XLS- 00000-dynamic-activation.md
+1. XLS- 00000 Dynamic Activation
