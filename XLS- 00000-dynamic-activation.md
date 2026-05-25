@@ -49,6 +49,17 @@ The proposed solution introduces a new optional field in every amendment definit
 | 1     | 24 hours          |
 | 0     | Immediate         |
 
+--
+flowchart TD
+    A[1. Author submits Amendment<br/>with optional activationTag] 
+    --> B[2. Amendment broadcast to network<br/>activationTag is fully transparent]
+    B --> C[3. dUNL Validators review & vote]
+    C --> D{80% supermajority reached?}
+    D -->|No| C
+    D -->|Yes| E[4. Activation timer starts<br/>based on activationTag value]
+    E --> F[Wait the specified duration<br/>of continuous 80% support]
+    F --> G[5. Amendment activates on next ledger]
+--
 
 
 
@@ -62,7 +73,6 @@ Even in the best case scenerio, waiting 15 days to address a known critical vuln
 
 By incorporating different values we maintain still providing 
 a tag other than 4 should only be used when there's a concern for the ledgers security, stability, and integrity. 
-
 
 ## 5. Backwards Compatibility
 
