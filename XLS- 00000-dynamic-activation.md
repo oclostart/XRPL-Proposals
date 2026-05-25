@@ -13,6 +13,7 @@
 
 ## 1. Abstract
 
+Currently, how fast an amendment starts the two week activation period is an unknown factor creating security risks when implementatio . To improve reasonable implementation times for critical 
 
 This proposal introduces an optional per-amendment **activationTag** (integer 0–4) embedded directly in the amendment definition. The tag lets the author specify a shorter, risk-appropriate activation window while keeping the process fully transparent and backward compatible.
 
