@@ -49,7 +49,7 @@ The proposed solution introduces a new optional field in every amendment definit
 | 1     | 24 hours          |
 | 0     | Immediate         |
 
-## Diagram: Amendment Activation Process with activationTag
+# Diagram: Amendment Activation Process with activationTag
                 +-------------------------+
                 | 1. Author submits       |
                 |    Amendment +          |
