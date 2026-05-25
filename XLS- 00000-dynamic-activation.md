@@ -52,8 +52,8 @@ The proposed solution introduces a new optional field in every amendment definit
 # Diagram: Amendment Activation Process with activationTag
                 +-------------------------+
                 | 1. Author submits       |
-                |    Amendment +          |
-                |    optional activationTag|
+                |   Amendment + optional  |
+                |   activationTag         |
                 +-------------------------+
                             |
                             v
