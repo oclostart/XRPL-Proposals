@@ -120,7 +120,7 @@ Tests to validate the new `activationTag` functionality:
 - Verify that invalid tag values are rejected or default to 4.
 - Verify that amendments with the same or different `activationTag` values can be active simultaneously on the same ledger.
 - Run full regression tests on the existing amendment activation logic to ensure no impact on current or previously activated amendments.
-- Verify that `activationTag` is correctly stored in the amendment object and visible via the `feature` command and ledger inspection.
+- Verify that `activationTag` is correctly stored in the amendment object
 
 ## 7. Reference Implementation
 
