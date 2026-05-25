@@ -21,7 +21,7 @@ This proposal introduces an optional per amendment **activationTag** (integer 0â
 
 The XRPL currently has no built in mechanism to shorten the activation window for amendments in emergency situations. To maintain ledger uptime, security, and integrity, a more flexible approach is needed to address time sensitive issues.
 
-Recently, dUNL response times have drastically improved thanks to the XRPL Foundation. While this allows amendments to be implemented faster, the fixed 14 day activation period still creates an unacceptable delay when dealing with critical vulnerabilities or zero-day attacks. Even with these ongoing improvements, the current system is not sufficient for urgent situations.
+Recently, dUNL response times have drastically improved thanks to the XRPL Foundation. While this improves amendment implementation times, the fixed 14 day activation period still creates an unacceptable delay when dealing with critical vulnerabilities or zero-day attacks. Even with these ongoing improvements, the current system is not sufficient for urgent situations.
 
 ## 3. Specification
 
