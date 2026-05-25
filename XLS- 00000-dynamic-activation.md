@@ -1,26 +1,18 @@
 <pre>
   xls: [XLS number]
-  title: [Ttsstence]
-  description: [Description is one full (short) sentence]
-  implementation: [optional - link to rippled PR for Amendment/System XLSes]
-  author: [a comma separated list of the author(s) with email addresses]
-  category: [Amendment | System | Ecosystem | Meta]
-  status: [Draft | Final | Living | Deprecated | Stagnant | Withdrawn]
-  proposal-from: [link to XRPL-Standards Proposal discussion where this XLS was proposed]
-  requires: [optional - XLS number(s) if this depends on other features]
-  created: YYYY-MM-DD
-  updated: YYYY-MM-DD
+  title: Dynamic Activation
+  description:
+  author: Ivan Cinseros
+  category: Amendment
+  status: Proposal
+  created: 2026-05-25
+  updated: 2026-05-25
 </pre>
 
-> **Note:** This is the suggested template for new XLS specifications. After you have filled in the requisite fields, please delete the guidance text (italicized bracketed instructions).
-
-_[The requirements to sections depend on the type of proposal. For example, amendments require some information that may not be relevant for other kinds of proposals. Please adapt the template as appropriate.]_
-
-_[The title should be 44 characters or less. The title should NOT include "XLS" prefix or the XLS number.]_
 
 _[For Proposals (pre-Draft stage), the title must include the category prefix (e.g., "Meta XLS: XLS Process and Guidelines").]_
 
-# [Title]
+# Ammendment 
 
 ## 1. Abstract
 
