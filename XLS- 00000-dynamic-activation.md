@@ -100,7 +100,7 @@ By making `activationTag` an optional field that defaults to the current 14 day 
 
 ## 6. Test Plan
 
-The following tests will be implemented in the `rippled` codebase to validate the new `activationTag` functionality:
+Tests to validate the new `activationTag` functionality:
 
 - Create five separate test amendments, each using a different `activationTag` value (0 through 4).
 - Verify that each amendment activates after exactly the expected duration of continuous 80% dUNL supermajority support:
