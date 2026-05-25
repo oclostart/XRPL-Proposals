@@ -1,0 +1,38 @@
+XLS-XXXX: Dynamic Amendment Activation Periods
+==============================================
+Status: Requirements In Progress
+Category: Amendment
+Created: May 25, 2026
+Author: Ivan Cisneros
+
+The XRP Ledger currently requires any amendment that reaches 80% validator support to wait a fixed 14 day (2-week) activation period 
+before becoming enabled. This delay provides time for node operators to upgrade but creates significant risk when critical security
+vulnerabilities or severe bugs are discovered.
+
+This proposal introduces a per-amendment activation tag (an integer 0–4) that allows the amendment’s author to set a shorter, risk-appropriate 
+activation window. The tag is embedded directly in the amendment definition, making the process transparent.
+
+1. Problem Statement: The fixed 14-day activation period is too long for zero-day vulnerabilities already affecting wallet integrity and security. 
+Even when the UNL is highly active and the network is responsive, the protocol forces the full 2 week delay. Validators currently have indirect 
+influence (by voting or not), but there is no built-in, explicit mechanism to shorten the activation safely. This creates unnecessary exposure
+windows for the ledger when speed is critical.
+
+2. Proposed Solution: Introduce a new optional field in every amendment definition.
+
+ActivationTag (integer, values 0–4). This tag determines the minimum continuous supermajority (80%) support period required before the 
+amendment activates.Activation Tag DefinitionsTag
+
+4 (Default): 14 days
+3: 10 days
+2: 3 days
+1: 1 day
+0: Immediate
+
+Recommended Use Case:Standard features, improvements, edge-case fixes
+Moderate bugs (not critical, but worth faster rollout)
+Critical bugs with known impact
+Serious security issues
+Zero-day vulnerabilities, emergency protocol fixes
+
+- activates on the next flagged ledger after 80% is reached
+- If no tag is specified, the amendment defaults to 4 (14 days).
