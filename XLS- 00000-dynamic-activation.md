@@ -49,21 +49,7 @@ The proposed solution introduces a new optional field in every amendment definit
 | 1     | 24 hours          |
 | 0     | Immediate         |
 
-## Diagram: Amendment Activation Process with activationTag
 
-```mermaid
-flowchart TD
-    A[1. Author submits Amendment<br/>with optional activationTag<br/>e.g. activationTag = 1] 
-    --> B[2. Amendment broadcast to network<br/>activationTag is fully transparent<br/>and visible to everyone]
-    B --> C[3. dUNL Validators review & vote]
-    C --> D{80% supermajority<br/>reached?}
-    D -->|No| C
-    D -->|Yes| E[4. Activation timer starts<br/>based on activationTag value]
-    E --> F[Wait the specified duration<br/>of continuous 80% support]
-    F --> G[Amendment activates on next ledger]
-    
-    style A fill:#e3f2fd
-    style G fill:#c8e6c9
 
 
 ## 4. Rationale
