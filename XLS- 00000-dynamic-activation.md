@@ -106,9 +106,13 @@ Tests to validate the new `activationTag` functionality:
 - Verify that each amendment activates after exactly the expected duration of continuous 80% dUNL supermajority support:
 
   `activationTag` 4 → after 14 days
+  
   `activationTag` 3 → after 10 days
+  
   `activationTag` 2 → after 3 days
+  
   `activationTag` 1 → after 24 hours
+  
   `activationTag` 0 → immediately (on the next ledger after 80% is reached)
 
 - Confirm that omitting the `activationTag` field defaults to value 4.
