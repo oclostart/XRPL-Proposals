@@ -9,7 +9,7 @@
   updated: 2026-05-25
 </pre>
 
-# Ammendment Idea: XLS-XXXX Dynamic Activation
+# Amendment Idea: XLS-XXXX Dynamic Activation
 
 ## 1. Abstract
 
