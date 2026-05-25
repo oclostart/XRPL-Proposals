@@ -35,7 +35,7 @@ The proposed solution introduces a new optional field in every amendment definit
 
 | Value | Duration          | Recommended Use Case |
 |-------|-------------------|----------------------|
-| 4     | 14 days (default) | Standard features, improvements, and edge-case fixes. Every amendment should use this value unless it addresses security, stability, or integrity concerns. |
+| 4     | 14 days (default) | Standard features, improvements, and edge case fixes. Every amendment should use this value unless it addresses security, stability, or integrity concerns. |
 | 3     | 10 days           | Moderate bugs that are not critical but would benefit from a faster rollout. |
 | 2     | 3 days            | Critical vulnerabilities with network wide impact that are moderately easy to discover and exploit. |
 | 1     | 24 hours          | Critical vulnerabilities with network wide impact that have not yet been actively exploited and are relatively easy to discover and exploit. |
